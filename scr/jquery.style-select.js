@@ -63,10 +63,14 @@
             this.updateContainerHeading();
         },
         buildOptionsHtml:function(options){
-            var res = '';
+            var res = '',
+                extraclass
+                ;
+
             for(var i=0; i<options.length;i++){
-                console.log(options[i].innerText);
-                res+="<li data-value='"+options[i].value+"'>"+options[i].text+"</li>";
+                console.log(options[i].dataset);
+                extraclass = options[i].dataset.extraClass!=undefined?options[i].dataset.extraClass:'';
+                res+="<li data-value='"+options[i].value+"' class='"+extraclass+"'>"+options[i].text+"</li>";
             }
             return res;
         },
