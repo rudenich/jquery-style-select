@@ -1,0 +1,76 @@
+$style-select-padding:3px;
+$style-select-padding-item:3px 0 3px 10px;
+$style-select-border-color:#c5c5c5;
+$style-select-background-color:#f9f8f6;
+$style-select-item-hover-background:#0000ff;
+$style-select-item-hover-color:white;
+$style-select-dropdown-height:10em;
+
+.jsb-style-select{
+  display: inline-block;
+  position: relative;
+  border:1px solid $style-select-border-color;
+  padding: $style-select-padding;
+  background-color: $style-select-background-color;
+  &.is-active{
+    box-shadow: 0px 0px 4px 4px rgba(190,190,190,.75);
+  }
+  &__heading{
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+  }
+
+  &__title{
+    user-select: none;
+    -moz-user-select: none;
+  }
+
+  &__trigger{
+    position: absolute;
+    right:0.4em;
+    margin-top: -3.5px;
+    top:50%;
+    background: url(../img/trigger.png) left top no-repeat;
+    width:9px;
+    height: 7px;
+
+    
+
+  }
+
+  &__dropdown{
+    width:100%;
+    z-index: 100;
+    display: none;
+    position: absolute;
+    left:0;
+    border:1px solid $style-select-border-color;
+    max-height: $style-select-dropdown-height;
+    overflow: auto;
+  }
+
+  &__list{
+
+    list-style: none;
+    padding: 0;
+    margin:0;
+
+    &>li{
+      cursor:pointer;
+      padding: $style-select-padding-item;
+      background-color: white;
+      &.is-hover{
+        background-color: $style-select-item-hover-background;
+        color: $style-select-item-hover-color;
+      }
+    }
+  }
+  select{
+    opacity: 0;
+    height: 0;
+    position: absolute;
+    top:0;
+    z-index: -10;
+  }
+}

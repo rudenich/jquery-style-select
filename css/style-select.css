@@ -1,0 +1,59 @@
+/* line 9, ../scss/style-select.scss */
+.jsb-style-select {
+  display: inline-block;
+  position: relative;
+  border: 1px solid #c5c5c5;
+  padding: 3px;
+  background-color: #f9f8f6; }
+  /* line 15, ../scss/style-select.scss */
+  .jsb-style-select.is-active {
+    box-shadow: 0px 0px 4px 4px rgba(190, 190, 190, 0.75); }
+  /* line 18, ../scss/style-select.scss */
+  .jsb-style-select__heading {
+    cursor: pointer;
+    position: relative;
+    z-index: 2; }
+  /* line 24, ../scss/style-select.scss */
+  .jsb-style-select__title {
+    user-select: none;
+    -moz-user-select: none; }
+  /* line 29, ../scss/style-select.scss */
+  .jsb-style-select__trigger {
+    position: absolute;
+    right: 0.4em;
+    margin-top: -3.5px;
+    top: 50%;
+    background: url(../img/trigger.png) left top no-repeat;
+    width: 9px;
+    height: 7px; }
+  /* line 42, ../scss/style-select.scss */
+  .jsb-style-select__dropdown {
+    width: 100%;
+    z-index: 100;
+    display: none;
+    position: absolute;
+    left: 0;
+    border: 1px solid #c5c5c5;
+    max-height: 10em;
+    overflow: auto; }
+  /* line 53, ../scss/style-select.scss */
+  .jsb-style-select__list {
+    list-style: none;
+    padding: 0;
+    margin: 0; }
+    /* line 59, ../scss/style-select.scss */
+    .jsb-style-select__list > li {
+      cursor: pointer;
+      padding: 3px 0 3px 10px;
+      background-color: white; }
+      /* line 63, ../scss/style-select.scss */
+      .jsb-style-select__list > li.is-hover {
+        background-color: #0000ff;
+        color: white; }
+  /* line 69, ../scss/style-select.scss */
+  .jsb-style-select select {
+    opacity: 0;
+    height: 0;
+    position: absolute;
+    top: 0;
+    z-index: -10; }

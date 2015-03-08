@@ -1,0 +1,22 @@
+Initialize^
+    Create html structure
+    Add event listeners
+
+Add event listeners
+    onClickContainer - showList
+    onClickOutside - hideLIst
+    onClickListItems - setvalue
+	
+Add event listeners to original doom
+	onFocus
+	onBlue
+	onKeyPress
+
+Main commands
+    refresh  = rebuild list of elements
+    setValue - set value of select and html representation
+	
+	
+setValue(value)
+	set select value via $().val(value)
+	update container header
